@@ -1,0 +1,26 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursach_wpf"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="kursach_wpf.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox Name="TaskList"
+                 BorderThickness="1"
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto" Margin="0,0,38,120">
+
+            <ListBoxItem>
+                <Button Content="Text"></Button>
+            </ListBoxItem>
+
+        </ListBox>
+        <Button  Name="Switch" Content="Аналитика" HorizontalAlignment="Left" Margin="25,0,0,20" VerticalAlignment="Bottom" Height="40" Width="108" Background="White" Foreground="DarkViolet"/>
+        <Label Name="LiveTimeLabel" Content="%TIME%" HorizontalAlignment="Right" Margin="0,0,5,15" FontWeight="Bold" VerticalAlignment="Bottom" Height="40" FontFamily="Roboto" FontSize="24" Width="120" Foreground="DarkViolet"/>
+        <Button Style="{DynamicResource MaterialDesignFloatingActionButton}" FontSize="25" Name="New" Content="+" HorizontalAlignment="Right" Margin="0,0,15,70" VerticalAlignment="Bottom" Height="45" Width="45" Click="Add_Button_Click"/>
+
+
+    </Grid>
+</Window>

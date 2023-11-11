@@ -1,0 +1,22 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursach_wpf"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="kursach_wpf.AddTaskWindow"
+        mc:Ignorable="d"
+        Title="Window1" Height="500" Width="400">
+    <Grid>
+        <TextBox Name="Name_TB" HorizontalAlignment="Stretch" Margin="26,58,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" GotFocus="Name_TB_GotFocus"/>
+        <TextBox Name="Desc_TB" HorizontalAlignment="Stretch" Margin="26,116,0,0" TextWrapping="Wrap" Text="Описание" GotFocus="Desc_TB_GotFocus" VerticalAlignment="Top"/>
+
+        <Button Content="Сохранить" HorizontalAlignment="Right" Margin="0,0,15,15" VerticalAlignment="Bottom" Click="Button_Click"/>
+
+        <materialDesign:TimePicker  Name="Start_Time" HorizontalAlignment="Left" Margin="26,192,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.091,-0.193" Is24Hours="True"/>
+        <Label Content="Время начала" HorizontalAlignment="Left" Margin="26,163,0,0" VerticalAlignment="Top"/>
+        <materialDesign:TimePicker  Name="End_Time" HorizontalAlignment="Left" Margin="26,251,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.091,-0.193" Is24Hours="True"/>
+        <Label Content="Время окончания" HorizontalAlignment="Left" Margin="26,222,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
