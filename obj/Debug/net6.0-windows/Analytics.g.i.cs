@@ -61,7 +61,7 @@ namespace kursach_wpf {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/kursach_wpf;component/analytics.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/kursach_wpf;V1.0.0.0;component/analytics.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\analytics.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

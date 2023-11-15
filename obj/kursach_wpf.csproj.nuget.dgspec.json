@@ -55,6 +55,10 @@
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[7.0.13, )"
+            },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.7.0, )"
             }
           },
           "imports": [

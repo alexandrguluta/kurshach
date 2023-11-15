@@ -88,7 +88,7 @@ namespace kursach_wpf {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/kursach_wpf;component/addtaskwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/kursach_wpf;V1.0.0.0;component/addtaskwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AddTaskWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
