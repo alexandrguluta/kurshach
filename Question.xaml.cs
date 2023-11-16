@@ -19,7 +19,7 @@ namespace kursach_wpf
     /// </summary>
     public partial class Question : Window
     {
-        public Question()
+        public Question(int task_id = -1)
         {
             InitializeComponent();
         }

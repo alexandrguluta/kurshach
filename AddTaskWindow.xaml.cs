@@ -22,10 +22,19 @@ namespace kursach_wpf
     {
         /// <summary>
         /// 
-        /// </summary>
+        ///// </summary>
+        //public AddTaskWindow()
+        //{
+        //    InitializeComponent();
+        //}
+
+        public Task Task { get; private set; }
         public AddTaskWindow()
         {
             InitializeComponent();
+            //Task = task;
+            //DataContext = Task;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -34,9 +43,9 @@ namespace kursach_wpf
             {
                 string connectionString = "Data Source=usersdata.db";
                 using var connection = new SqliteConnection(connectionString);
-                connection.Open();
+    connection.Open();
                 var command = connection.CreateCommand();
-                    command.CommandText = "INSERT INTO tasks (user, name, description, start_time, end_time, time_overdue) " +
+    command.CommandText = "INSERT INTO tasks (user, name, description, start_time, end_time, time_overdue) " +
                                           "VALUES (@user, @name, @description, @start_time, @end_time, @time_overdue)";
 
                     // Добавляем параметры к команде
@@ -49,7 +58,7 @@ namespace kursach_wpf
                 command.ExecuteNonQuery();
                 connection.Close();
                 this.Close();
-            }
+    }
             else
             {
                 MessageBox.Show("Нужно заполнить все поля!");

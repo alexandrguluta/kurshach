@@ -76,3 +76,5 @@ C:\Users\alexandr\source\repos\kursach_wpf\bin\Debug\net6.0-windows\Microsoft.Ex
 C:\Users\alexandr\source\repos\kursach_wpf\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
 C:\Users\alexandr\source\repos\kursach_wpf\bin\Debug\net6.0-windows\System.Text.Json.dll
 C:\Users\alexandr\source\repos\kursach_wpf\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\alexandr\source\repos\kursach_wpf\bin\Debug\net6.0-windows\Quartz.dll
+C:\Users\alexandr\source\repos\kursach_wpf\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll

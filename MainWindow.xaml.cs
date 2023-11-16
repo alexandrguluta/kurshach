@@ -36,10 +36,28 @@ namespace kursach_wpf
             }
             this.timerglobal = new System.Threading.Timer(x =>
             {
-                //this.ShowWindow();
+
             }, null, timeToGo, Timeout.InfiniteTimeSpan);
         }
 
+        public void ShowQuestion()
+        {
+            Question questionwin = new Question();
+            questionwin.Show();
+        }
+        private void StartTimerToTheNearest()
+        {
+
+        }
+        private DateTime GetTimeFromDBID(int id)
+        {
+            //
+            return DateTime.Now.AddMinutes(10);
+        }
+        private DateTime GetTimeFromDBNearest()
+        {
+            return DateTime.Now.AddMinutes(1);
+        }
         private DispatcherTimer timer;
         public MainWindow()
         {
@@ -48,17 +66,11 @@ namespace kursach_wpf
             LiveTime.Interval = TimeSpan.FromSeconds(1);
             LiveTime.Tick += timer_Tick;
 
-            
+
 
         }
-        void timer_Tick(object sender, EventArgs e)
+        public void InitializeDB()
         {
-            LiveTimeLabel.Content = DateTime.Now.ToString("HH:mm:ss");
-        }
-        private void Add_Button_Click(object sender, RoutedEventArgs e)
-        {
-            AddTaskWindow win2 = new AddTaskWindow();
-            win2.Show();
             string connectionString = "Data Source=usersdata.db";
             using var connection = new SqliteConnection(connectionString);
             connection.Open();
@@ -76,7 +88,15 @@ namespace kursach_wpf
                 );
                 ";
             command.ExecuteNonQuery();
-            connection.Close();
+        }
+        void timer_Tick(object sender, EventArgs e)
+        {
+            LiveTimeLabel.Content = DateTime.Now.ToString("HH:mm:ss");
+        }
+        private void Add_Button_Click(object sender, RoutedEventArgs e)
+        {
+            AddTaskWindow win2 = new AddTaskWindow();
+            win2.Show();
         }
     }
 }
